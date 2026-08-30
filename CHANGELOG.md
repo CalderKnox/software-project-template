@@ -9,3 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial project template with standardized directory structure and community health files.
+- Documentation skeleton (`docs/`) with an `index.md` in every subdirectory: adr, design, rfcs, specs, playbooks, runbooks.

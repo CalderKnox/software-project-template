@@ -45,7 +45,15 @@ Standard top-level layout — keep new code consistent with it:
 ```text
 .
 ├── .github/            # CI workflows, issue/PR templates, repo configuration
-├── docs/               # Long-form documentation and design notes
+├── docs/               # Documentation (every subdir has an index.md)
+│   ├── index.md        # Documentation home and table of contents
+│   ├── adr/            # Architecture decision records (ADRs)
+│   ├── design/         # System design: components, diagrams, data flows
+│   ├── rfcs/           # Proposals for significant changes, open for review
+│   ├── specs/          # Agreed contracts: behavior, APIs, schemas
+│   ├── playbooks/      # How-to guides for recurring tasks
+│   └── runbooks/       # Operational procedures: deploy, monitor, respond
+├── examples/           # Runnable usage examples
 ├── src/                # Source code
 ├── tests/              # Automated tests (mirrors src/ layout)
 ├── CHANGELOG.md        # Notable changes (Keep a Changelog format)
