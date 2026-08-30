@@ -13,7 +13,7 @@ _None yet — add playbooks and list them here._
 
 - Development workflow guides: releasing, reviewing, testing
 - Task-oriented how-tos for common operations
-- Onboarding material for new contributors
+- Onboarding exercises for new contributors
 
 One topic per playbook; link each from this index. Procedures for operating
-the system in production belong in [runbooks/](../runbooks/index.md).
+the system in production belong in [05-runbooks/](../05-runbooks/).

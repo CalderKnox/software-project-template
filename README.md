@@ -45,14 +45,17 @@ Standard top-level layout — keep new code consistent with it:
 ```text
 .
 ├── .github/            # CI workflows, issue/PR templates, repo configuration
-├── docs/               # Documentation (every subdir has an index.md)
-│   ├── index.md        # Documentation home and table of contents
-│   ├── adr/            # Architecture decision records (ADRs)
-│   ├── design/         # System design: components, diagrams, data flows
-│   ├── rfcs/           # Proposals for significant changes, open for review
-│   ├── specs/          # Agreed contracts: behavior, APIs, schemas
-│   ├── playbooks/      # How-to guides for recurring tasks
-│   └── runbooks/       # Operational procedures: deploy, monitor, respond
+├── docs/               # Documentation (each subdir indexed by README.md)
+│   ├── README.md       # Documentation home and table of contents
+│   ├── 00-rfcs/        # Proposals for significant changes, open for review
+│   ├── 01-adrs/        # Architecture decision records (ADRs)
+│   ├── 02-design/      # System design: architecture, modules, specs
+│   ├── 03-api/         # API contracts and schema reference
+│   ├── 04-playbooks/   # How-to guides for recurring tasks
+│   ├── 05-runbooks/    # Operational procedures: deploy, monitor, respond
+│   ├── 06-guides/      # Developer, user, and tutorial guides
+│   ├── 07-reference/   # Reference material: glossary, configuration
+│   └── 08-archive/     # Superseded and historical documents
 ├── examples/           # Runnable usage examples
 ├── src/                # Source code
 ├── tests/              # Automated tests (mirrors src/ layout)
@@ -63,6 +66,11 @@ Standard top-level layout — keep new code consistent with it:
 ├── README.md
 └── SECURITY.md         # How to report security vulnerabilities
 ```
+
+## Documentation
+
+See [docs/](docs/README.md) for RFCs, ADRs, design docs, API reference, and
+operational guides.
 
 ## Contributing
 
