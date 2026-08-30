@@ -1,3 +1,6 @@
+<!-- README template: replace every <placeholder> when starting a project
+from it, then delete this note. -->
+
 # <Project Name>
 
 <One-paragraph description: what this project does, who it is for, and why it exists.>
@@ -38,6 +41,11 @@ cd <repo>
 # TODO: test command
 ```
 
+## Documentation
+
+See [docs/](docs/README.md) for RFCs, ADRs, design docs, API reference, and
+operational guides.
+
 ## Project structure
 
 Standard top-level layout — keep new code consistent with it:
@@ -45,6 +53,7 @@ Standard top-level layout — keep new code consistent with it:
 ```text
 .
 ├── .github/            # CI workflows, issue/PR templates, repo configuration
+├── .gitignore          # Paths git should not track
 ├── docs/               # Documentation (each subdir indexed by README.md)
 │   ├── README.md       # Documentation home and table of contents
 │   ├── 00-rfcs/        # Proposals for significant changes, open for review
@@ -66,11 +75,6 @@ Standard top-level layout — keep new code consistent with it:
 ├── README.md
 └── SECURITY.md         # How to report security vulnerabilities
 ```
-
-## Documentation
-
-See [docs/](docs/README.md) for RFCs, ADRs, design docs, API reference, and
-operational guides.
 
 ## Contributing
 
