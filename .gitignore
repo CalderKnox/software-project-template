@@ -1,0 +1,44 @@
+# --- Operating system ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors & IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Environment variables & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Logs & temporary files ---
+*.log
+tmp/
+
+# --- Build output & dependencies ---
+dist/
+build/
+out/
+target/
+node_modules/
+vendor/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Test coverage ---
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+
+# --- AI assistant local state ---
+# Operational artifacts are local-only; .omc/skills/ is the committable exception.
+.omc/*
+!.omc/skills/
+.claude/settings.local.json
