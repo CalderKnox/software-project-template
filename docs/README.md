@@ -44,6 +44,11 @@ Every directory must contain both `README.md` and `_template.md`. Run
 Markdown linting with the repository's [.markdownlint.yaml](../.markdownlint.yaml)
 configuration.
 
+`README.md` is mandatory at the second and third directory levels under
+`docs/` (`docs/<section>/` and `docs/<section>/<subsection>/`). These indexes
+are the navigation contract for the documentation tree; deeper directories
+follow the same convention when they exist.
+
 ## ADRs versus design decisions
 
 These are complementary records with different levels of authority:

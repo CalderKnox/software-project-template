@@ -20,6 +20,15 @@ while IFS= read -r directory; do
   fi
 done < <(find "$docs_root" -type d -print | sort)
 
+# The documentation contract explicitly requires indexes at the second and
+# third levels: docs/<section>/ and docs/<section>/<subsection>/.
+while IFS= read -r directory; do
+  if [[ ! -f "$directory/README.md" ]]; then
+    echo "docs-check: required index missing: $directory/README.md" >&2
+    failures=1
+  fi
+done < <(find "$docs_root" -mindepth 1 -maxdepth 2 -type d -print | sort)
+
 while IFS='|' read -r file link; do
   if ! rg -Fq "$link" "$file"; then
     echo "docs-check: $file must contain link $link" >&2
