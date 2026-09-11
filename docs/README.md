@@ -20,18 +20,72 @@ operating the built system:
 | [07-reference/](07-reference/) | Reference material: glossary, configuration        |
 | [08-archive/](08-archive/)     | Superseded and historical documents                |
 
-Each directory has a `README.md` describing what belongs there — list new
-documents in it. `00-rfcs/`, `01-adrs/`, and `02-design/` also ship a
-`_template.md` scaffold to copy when creating a document.
+Each directory has a `README.md` describing what belongs there and a local
+`_template.md` scaffold for new documents. Templates are intentionally
+directory-specific, but use the same metadata order, heading style, and
+placeholder conventions.
 
 ## Conventions
 
 - One topic per file, named in `kebab-case.md`; RFCs and ADRs use
   `NNNN-<slug>.md` numbering.
+- Keep the metadata block immediately below the title. Use ISO dates
+  (`YYYY-MM-DD`), lowercase lifecycle statuses, and links rather than copied
+  text.
 - Every subdirectory is indexed by its `README.md`, which GitHub renders
   automatically when browsing; `_template.md` files are scaffolds, not
   documents.
 - Prefer linking from prose over duplicating content.
+
+## Document quality
+
+Every directory must contain both `README.md` and `_template.md`. Run
+`./scripts/docs-check.sh` locally to validate that structure; CI also runs
+Markdown linting with the repository's [.markdownlint.yaml](../.markdownlint.yaml)
+configuration.
+
+## ADRs versus design decisions
+
+These are complementary records with different levels of authority:
+
+| Use | `01-adrs/` | `02-design/01-decisions/` |
+| --- | --- | --- |
+| Scope | Cross-cutting or externally visible architecture | Local implementation or component trade-off |
+| Authority | Durable project decision with named deciders | Working design note owned by the design/code author |
+| Change policy | Append a superseding ADR; do not rewrite history | Update the note as the design evolves, keeping a short history |
+| Required context | Alternatives, consequences, and governance rationale | Constraints, chosen option, and implementation impact |
+| Relationship | May be linked from design docs | Link to the governing ADR when one exists |
+
+If a design note gains cross-cutting impact, security/compliance weight, or a
+long-lived compatibility promise, promote it to an ADR and leave a link in the
+original note. An ADR should not be used for a transient choice that is only
+relevant to one module.
+
+## Standard example
+
+The following minimal example shows the expected shape. Copy the template from
+the target directory and replace every placeholder before committing:
+
+```markdown
+# 0007. Use idempotency keys for write requests
+
+- **Status:** accepted
+- **Date:** 2026-09-11
+- **Deciders:** Platform and API teams
+
+## Context
+
+Retries can duplicate a write when a client loses the response.
+
+## Decision
+
+Require an idempotency key on payment-creation requests and retain the result
+for 24 hours.
+
+## Consequences
+
+Retries are safe, at the cost of a small persistence table and key-expiry job.
+```
 
 ## Where does my document go?
 
