@@ -50,7 +50,9 @@ jobs:
           done < <(find "$docs_root" -mindepth 1 -maxdepth 2 -type d -print | sort)
 
           while IFS='|' read -r file link; do
-            if ! rg -Fq "$link" "$file"; then
+            # grep -F (fixed-string) is used instead of rg because ripgrep is
+            # not preinstalled on GitHub-hosted ubuntu-latest runners.
+            if ! grep -Fq -- "$link" "$file"; then
               echo "docs-check: $file must contain link $link" >&2
               failures=1
             fi
