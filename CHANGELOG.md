@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Initial project template with standardized directory structure and community health files.
 - Documentation skeleton (`docs/`): numbered sections in lifecycle order —
   `00-rfcs` through `08-archive` — each indexed by a `README.md`, with
