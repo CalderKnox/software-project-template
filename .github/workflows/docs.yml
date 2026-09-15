@@ -18,7 +18,7 @@ jobs:
     name: Lint and validate documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check documentation structure
         run: |
           #!/usr/bin/env bash
