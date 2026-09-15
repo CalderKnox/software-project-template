@@ -56,6 +56,7 @@ jobs:
               echo "docs-check: $file must contain link $link" >&2
               failures=1
             fi
+
           done <<'REQUIRED_LINKS'
           docs/01-adrs/README.md|../02-design/01-decisions/_template.md
           docs/02-design/README.md|../01-adrs/
