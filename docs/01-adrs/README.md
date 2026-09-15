@@ -5,8 +5,8 @@ future contributors understand not just *what* the system does but *why*.
 
 ## Contents
 
-_None yet — number decisions sequentially as `NNNN-<slug>.md`, starting from
-`0001`._
+*None yet — number decisions sequentially as `NNNN-<slug>.md`, starting from
+`0001`.*
 
 | ADR | Title | Status |
 | --- | ----- | ------ |
