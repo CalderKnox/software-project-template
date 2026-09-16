@@ -67,7 +67,7 @@ Standard top-level layout — keep new code consistent with it:
 │   └── 08-archive/     # Superseded and historical documents
 ├── examples/           # Runnable usage examples
 ├── src/                # Source code
-├── tests/              # Automated tests (mirrors src/ layout)
+├── tests/              # Automated tests (numbered layers; see tests/README.md)
 ├── CHANGELOG.md        # Notable changes (Keep a Changelog format)
 ├── CODE_OF_CONDUCT.md  # Community standards
 ├── CONTRIBUTING.md     # How to contribute

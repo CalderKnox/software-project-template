@@ -1,11 +1,11 @@
 # 测试体系（Test Suite）
 
-目录编号即 CI 执行顺序；分层判据与反模式规范见各层 README。
-本目录由 init-tests.sh 生成——条件层不用就删，示例目录（_ 前缀）改名或删除。
+目录编号即 CI 的建议执行顺序（当前 .github/workflows/ci.yml 为占位符，接线时按编号顺序编排各层）。
+本目录为模板自带脚手架：条件性层（启用条件见下表）不使用时直接删除。
 
 ```text
 tests/
-├── README.md            # 速查表（含每层启用条件）+ CI 编排表
+├── README.md            # 速查表（含每层启用条件）
 ├── 00-unit/             # 单元（原 unit）
 ├── 01-integration/      # 集成（原 integration）
 ├── 02-contract/         # 契约（原 contract）
