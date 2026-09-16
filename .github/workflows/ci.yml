@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build:
     name: Build & test
@@ -32,6 +36,8 @@ jobs:
       #       python-version: "3.13"
       #   - run: pip install -r requirements.txt
       #   - run: pytest
+      #
+      # Run test layers in numeric order (see tests/README.md).
 
       - name: Placeholder (remove once real steps exist)
         run: 'echo "TODO: add build, lint, and test steps for this project"'
