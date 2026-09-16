@@ -39,8 +39,7 @@ placeholder conventions.
 
 ## Document quality
 
-Every directory must contain both `README.md` and `_template.md`. Run
-`./scripts/docs-check.sh` locally to validate that structure; CI also runs
+Every directory must contain both `README.md` and `_template.md`. CI also runs
 Markdown linting with the repository's [.markdownlint.yaml](../.markdownlint.yaml)
 configuration.
 

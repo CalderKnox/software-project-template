@@ -26,9 +26,7 @@ Please search existing issues before opening a new one.
 3. Add or update tests for any behavior change.
 4. Update documentation and add an entry under **Unreleased** in
    [CHANGELOG.md](CHANGELOG.md).
-5. Run `./scripts/docs-check.sh` when changing documentation. Markdown is
-   linted automatically by the **Documentation quality** CI workflow.
-6. Keep pull requests small and focused — one logical change per PR.
+5. Keep pull requests small and focused — one logical change per PR.
 
 ## Pull request checklist
 
