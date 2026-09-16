@@ -7,8 +7,11 @@ on:
     paths:
       - "**/*.md"
       - ".markdownlint.yaml"
-      - "scripts/docs-check.sh"
       - ".github/workflows/docs.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
@@ -70,6 +73,6 @@ jobs:
           echo "docs-check: all directories have README.md and _template.md"
 
       - name: Lint Markdown
-        uses: DavidAnson/markdownlint-cli2-action@v20
+        uses: DavidAnson/markdownlint-cli2-action@v24
         with:
           globs: "**/*.md"
