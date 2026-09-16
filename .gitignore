@@ -31,15 +31,21 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.eslintcache
+*.tsbuildinfo
 
 # --- Test coverage ---
 coverage/
 .nyc_output/
 .coverage
 htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+*.egg-info/
 
 # --- AI assistant local state ---
-# Operational artifacts are local-only; .omc/skills/ is the committable exception.
-.omc/*
-!.omc/skills/
+# Local agent state is machine-local; do not commit.
+.pi/
 .claude/settings.local.json
