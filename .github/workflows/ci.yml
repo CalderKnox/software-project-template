@@ -41,3 +41,18 @@ jobs:
 
       - name: Placeholder (remove once real steps exist)
         run: 'echo "TODO: add build, lint, and test steps for this project"'
+
+  # Same hooks as .pre-commit-config.yaml, run against the whole tree.
+  prek:
+    name: Lint (prek)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - uses: j178/prek-action@v3
+        with:
+          prek-version: 0.5.x
