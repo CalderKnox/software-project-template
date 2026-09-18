@@ -15,7 +15,16 @@ Please search existing issues before opening a new one.
 
 1. Fork and clone the repository.
 2. Install your toolchain and dependencies. <!-- TODO: project-specific setup steps -->
-3. Run the test suite to confirm a clean baseline.
+3. Install the pre-commit hooks ([prek](https://github.com/j178/prek)):
+
+   ```sh
+   pip install prek     # or: uv tool install prek / brew install prek
+   prek install
+   ```
+
+   The same hooks run in CI (`.github/workflows/ci.yml`); you can also run
+   them against the whole tree at any time with `prek run --all-files`.
+4. Run the test suite to confirm a clean baseline.
 
 ## Making changes
 
@@ -31,6 +40,7 @@ Please search existing issues before opening a new one.
 ## Pull request checklist
 
 - [ ] CI passes (build, lint, tests)
+- [ ] `prek run --all-files` passes locally
 - [ ] Tests cover the new or changed behavior
 - [ ] Documentation and changelog updated
 - [ ] No secrets or credentials committed
