@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The prek CI job relies on prek-action to install the binary and hook environments.
+
 ### Added
 
 - Initial project template with standardized directory structure and community health files.
