@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `tests/README.md` is what keeps `tests/` in git.
 - Documentation CI checks each directory once, including section and subsection indexes.
 - Guides, playbooks, and runbooks each describe one kind of document. Configuration lookup stays in `07-reference/`; contributor onboarding stays in `06-guides/developer-guides/`.
 - CodeQL analyzes GitHub Actions with `build-mode: none`.
