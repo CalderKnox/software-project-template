@@ -10,5 +10,11 @@ _None yet — add developer guides and list them here._
 | Document | Description |
 | -------- | ----------- |
 
+## What belongs here
+
+- Onboarding path for new contributors
+- Repository tour and architecture walkthrough
+- Coding conventions, style, and tooling notes
+
 For contribution mechanics (branches, commits, PRs) see
 [CONTRIBUTING.md](../../../CONTRIBUTING.md).

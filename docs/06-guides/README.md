@@ -1,7 +1,6 @@
-# Developer Guide
+# Guides
 
-How to work in this repository: setup, conventions, and where everything
-lives.
+Learning material and task documentation for contributors and users.
 
 ## Contents
 
@@ -11,12 +10,6 @@ lives.
 | [tutorials/](tutorials/)                 | Guided, learning-oriented lessons          |
 | [user-guides/](user-guides/)             | Documentation for users of the software    |
 
-## What belongs here
-
-- Onboarding path for new contributors
-- Repository tour and architecture walkthrough
-- Coding conventions, style, and tooling notes
-
-For contribution mechanics (branches, commits, PRs) see
-[CONTRIBUTING.md](../../CONTRIBUTING.md). Repeatable task procedures belong
+Contributor mechanics (branches, commits, pull requests) stay in
+[CONTRIBUTING.md](../../CONTRIBUTING.md). Recurring engineering tasks belong
 in [04-playbooks/](../04-playbooks/).

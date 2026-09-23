@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Guides, playbooks, and runbooks each describe one kind of document. Configuration lookup stays in `07-reference/`; contributor onboarding stays in `06-guides/developer-guides/`.
 - CodeQL analyzes GitHub Actions with `build-mode: none`.
 - The prek CI job relies on prek-action to install the binary and hook environments.
 

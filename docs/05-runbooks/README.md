@@ -12,8 +12,8 @@ _None yet — add runbooks and list them here._
 ## What belongs here
 
 - Build, release, and deployment procedures
-- Environment and configuration reference
 - Monitoring, alerting, and on-call procedures
 - Incident response and rollback procedures
 
-Keep runbooks actionable: commands first, explanation second.
+Keep runbooks actionable: commands first, explanation second. Configuration
+and environment lookup tables belong in [07-reference/](../07-reference/).
