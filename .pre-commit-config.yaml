@@ -1,0 +1,35 @@
+# Pre-commit hooks, executed by prek (https://github.com/j178/prek), a faster
+# drop-in replacement for pre-commit.
+#
+# Local usage:
+#   pip install prek        # or: uv tool install prek / brew install prek
+#   prek install            # activate the git pre-commit hook
+#   prek run --all-files    # run every hook against the whole tree
+#
+# CI runs the same set of hooks (see .github/workflows/ci.yml).
+# Keep this file language-agnostic: add toolchain-specific hooks together
+# with the project's build steps.
+
+repos:
+  # Sanity checks on this config itself.
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+
+  # Generic file hygiene, useful for any project.
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+# Markdown is linted by markdownlint (see .markdownlint.yaml and
+# .github/workflows/docs.yml), so it is intentionally not duplicated here.
