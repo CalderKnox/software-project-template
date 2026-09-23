@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CodeQL analyzes GitHub Actions with `build-mode: none`.
 - The prek CI job relies on prek-action to install the binary and hook environments.
 
+### Fixed
+
+- The architecture index starts new documents from its own scaffold.
+
 ### Added
 
 - Initial project template with standardized directory structure and community health files.
