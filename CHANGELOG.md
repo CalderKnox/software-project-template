@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The adoption check skips `ADOPTING.md` and gitignored files, and it fails on leftover template sentences: the README description, setup TODOs, the changelog adoption line, and any remaining `ADOPTING.md` reference. Command tokens are replaced in the toolchain change, not before a stack exists.
 - `Lint (prek)` runs prek on every push and pull request. `Toolchain (not configured)` is an echo placeholder, not a build or test. Documentation structure is checked by `scripts/docs-check.sh` in the Documentation quality workflow. Markdown lint stays in that workflow.
 - `tests/README.md` is English and says conditional layers are created when their enablement condition is true.
 - `scripts/docs-check.sh` checks section and subsection indexes and required cross-links. Directories deeper than a subsection are not checked.
