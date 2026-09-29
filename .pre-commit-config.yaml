@@ -2,7 +2,8 @@
 # drop-in replacement for pre-commit.
 #
 # Local usage:
-#   pip install prek        # or: uv tool install prek / brew install prek
+#   pip install 'prek==0.5.4'   # or: uv tool install 'prek==0.5.4'
+#   brew install prek           # cannot pin 0.5.4; prefer pip or uv
 #   prek install            # activate the git pre-commit hook
 #   prek run --all-files    # run every hook against the whole tree
 #
@@ -18,7 +19,7 @@ repos:
 
   # Generic file hygiene, useful for any project.
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict

@@ -1,5 +1,7 @@
 name: CI
 
+# Pull-request code runs in these jobs. Do not give them secrets.
+
 on:
   push:
     branches: [main]
@@ -15,7 +17,9 @@ concurrency:
 jobs:
   # Successful placeholder only. This job does not build or test anything.
   # Replace it before anyone treats it as a required test check, then run test
-  # layers in numeric order (see tests/README.md). Common setups:
+  # layers in numeric order (see tests/README.md). Leave the samples commented.
+  # Write a new job and pin every action to a commit SHA, as checkout is
+  # pinned below. Common setups:
   #
   # Node.js:
   #   - uses: actions/setup-node@v4
@@ -54,6 +58,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: j178/prek-action@4e14d07f9231acabce116ccfca13b13dd9755ece # v3.0.0
+      # v3.0.0 (4e14d07f) checksums stop before 0.5.4, so that pin skips verification.
+      - uses: j178/prek-action@c3f68a15f4fc83f8da3398da620e4de60ce27d01 # prek 0.5.4 checksums
         with:
           prek-version: "0.5.4"
