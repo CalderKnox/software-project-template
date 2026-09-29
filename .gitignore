@@ -10,6 +10,10 @@ desktop.ini
 *.swo
 *~
 *.git
+**/.orca
+**/.omc
+**/.pi
+
 
 # --- Environment variables & secrets ---
 .env
