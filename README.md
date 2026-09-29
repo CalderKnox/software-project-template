@@ -38,7 +38,8 @@ cd {repo}
 ## Running the tests
 
 ```bash
-# TODO: test command
+# TODO: {lint command}
+# TODO: {test command}
 ```
 
 ## Documentation
@@ -60,9 +61,9 @@ Standard top-level layout — keep new code consistent with it:
 │   ├── README.md            # Documentation home and table of contents
 │   ├── 00-rfcs/             # Proposals for significant changes, open for review
 │   ├── 01-adrs/             # Architecture decision records (ADRs)
-│   ├── 02-design/           # System design: architecture, modules, specs
+│   ├── 02-design/           # System design: architecture, decisions, modules, specs
 │   ├── 03-api/              # API contracts and schema reference
-│   ├── 04-playbooks/        # How-to guides for recurring tasks
+│   ├── 04-playbooks/        # How-to guides for recurring engineering tasks
 │   ├── 05-runbooks/         # Operational procedures: deploy, monitor, respond
 │   ├── 06-guides/           # Developer, user, and tutorial guides
 │   ├── 07-reference/        # Reference material: glossary, configuration

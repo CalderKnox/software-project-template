@@ -1,29 +1,31 @@
 # AGENTS.md
 
 Instructions for coding agents working in `{Project Name}`. Replace every
-`{curly}` token before you treat the commands below as real. A nested
-`AGENTS.md` closer to the files you are editing overrides this one for that
-directory.
+`{like this}` placeholder before you treat a command that still contains one
+as real. A nested `AGENTS.md` closer to the files you are editing overrides
+this one for that directory.
 
 ## Repository
 
 `{Project Name}` uses the layout in [README.md](README.md). Product code
 belongs in `src/`. The toolchain is `{Toolchain or runtime}`.
 
-Until a stack is chosen, this repository has no install, lint, or test
-command. Do not invent one, and do not uncomment the Node or Python samples
-in `.github/workflows/ci.yml`.
+Until a stack is chosen, leave project install, lint, and test commands
+unset, and leave the Node and Python samples in `.github/workflows/ci.yml`
+commented. The prek commands in the next section are the ones that work
+today.
 
 ## Commands that work today
 
 ```bash
-pip install prek     # or: uv tool install prek / brew install prek
+pip install 'prek==0.5.4'  # or: uv tool install 'prek==0.5.4'
+# brew install prek cannot pin this version
 prek install
 prek run --all-files
 ```
 
 `prek run --all-files` includes `scripts/docs-check.sh`. Markdown lint runs
-in the Documentation quality workflow, not in prek.
+in the `Lint and validate documentation` job, not in prek.
 
 ```bash
 # TODO: {lint command}
@@ -39,9 +41,9 @@ that job is not a build and not a test run.
 | --- | --- |
 | Source | `src/` |
 | Tests | `tests/`; read [tests/README.md](tests/README.md) before adding a layer |
-| Proposal before building | `docs/00-rfcs/` |
-| Cross-cutting or hard-to-reverse decision | `docs/01-adrs/` |
-| Local or reversible trade-off | `docs/02-design/01-decisions/` |
+| Significant proposal before building | `docs/00-rfcs/` |
+| Cross-cutting, hard-to-reverse, or durable commitment | `docs/01-adrs/` |
+| Component-local implementation trade-off | `docs/02-design/01-decisions/` |
 | Recurring engineering how-to | `docs/04-playbooks/` |
 | Production operation | `docs/05-runbooks/` |
 | Contributor onboarding | `docs/06-guides/developer-guides/` |
@@ -69,7 +71,9 @@ Follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## After a stack is chosen
 
-In the same change: replace the `toolchain` job in
-`.github/workflows/ci.yml`, put `{lint command}` and `{test command}` in this
-file and in the README, add one real test under `tests/00-unit/`, and add the
+In the same change: add the language manifest, replace the `toolchain` job in
+`.github/workflows/ci.yml` (leave the Node and Python samples commented, write
+a new job, and pin every action to a commit SHA), put `{lint command}` and
+`{test command}` in this file and in the README, and add one real test under
+`tests/00-unit/`. In the pull request that adds a language, also add the
 matching CodeQL matrix row and Dependabot ecosystem.

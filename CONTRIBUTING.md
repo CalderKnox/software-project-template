@@ -22,14 +22,16 @@ Please search existing issues before opening a new one.
 3. Install the pre-commit hooks ([prek](https://github.com/j178/prek)):
 
    ```sh
-   pip install prek     # or: uv tool install prek / brew install prek
+   pip install 'prek==0.5.4'  # or: uv tool install 'prek==0.5.4'
+   # brew install prek cannot pin this version
    prek install
    ```
 
-   `Lint (prek)` in `.github/workflows/ci.yml` runs these hooks on every push
-   and pull request.
+   `Lint (prek)` in `.github/workflows/ci.yml` runs these hooks on every pull
+   request, and on every push to `main`.
 4. There is no test suite yet. Run `prek run --all-files` (includes
-   `scripts/docs-check.sh`). Markdown lint runs in Documentation quality CI.
+   `scripts/docs-check.sh`). Markdown lint runs in the `Lint and validate
+   documentation` job, not in prek.
 
 ## Making changes
 
@@ -46,6 +48,7 @@ Please search existing issues before opening a new one.
 ## Pull request checklist
 
 - [ ] `Lint (prek)` passes
+- [ ] `Lint and validate documentation` passes
 - [ ] `prek run --all-files` passes locally
 - [ ] Documentation and changelog updated
 - [ ] No secrets or credentials committed

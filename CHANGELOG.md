@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `scripts/docs-check.sh` rejects a file placed directly in index-only `docs/02-design` or `docs/06-guides`. Architecture docs route to `02-design/00-architecture/`. Contributor onboarding routes to `06-guides/developer-guides/`.
 - An ADR is a cross-cutting, hard-to-reverse, or durable commitment. A design decision is a component-local implementation trade-off. Accepted RFC outcomes record an ADR only when that test is true.
 - `SECURITY.md` reports no release yet. Private vulnerability reporting, secret scanning, and push protection are adoption steps. The bug report form sends vulnerabilities to `SECURITY.md`.
-- `Lint (prek)` runs prek on every push and pull request. `Toolchain (not configured)` is an echo placeholder, not a build or test. Documentation structure is checked by `scripts/docs-check.sh` in the Documentation quality workflow. Markdown lint stays in that workflow.
+- `Lint (prek)` runs on every pull request, and on every push to `main`. `Toolchain (not configured)` is an echo placeholder, not a build or test. Documentation structure is checked by `scripts/docs-check.sh` in the Documentation quality workflow. Markdown lint stays in that workflow.
 - `tests/README.md` is English and says conditional layers are created when their enablement condition is true.
 - `scripts/docs-check.sh` checks section and subsection indexes and required cross-links. Directories deeper than a subsection are not checked.
 - Guides, playbooks, and runbooks each describe one kind of document. Configuration lookup stays in `07-reference/`; contributor onboarding stays in `06-guides/developer-guides/`.
@@ -32,11 +32,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial project template with standardized directory structure and community health files.
-- Pre-commit hooks via [prek](https://github.com/j178/prek): `.pre-commit-config.yaml` for local use and a `Lint (prek)` CI job that runs `prek run --all-files` on every push/PR.
+- Pre-commit hooks via [prek](https://github.com/j178/prek): `.pre-commit-config.yaml` for local use and a `Lint (prek)` CI job that runs `prek run --all-files` on every pull request and on every push to `main`.
 - Documentation skeleton (`docs/`): numbered sections in lifecycle order —
   `00-rfcs` through `08-archive` — each indexed by a `README.md`, with
   `_template.md` scaffolds for RFCs, ADRs, and design docs, and nested
   sections for architecture, modules, specs, and guides.
 - Adoption checklist (`ADOPTING.md`) and `scripts/check-placeholders.sh`.
-- `AGENTS.md` is the coding-agent instruction template. Replace its `{curly}` tokens before relying on the commands.
+- `AGENTS.md` is the coding-agent instruction template. Replace its `{like this}` placeholders before relying on a command that still contains one.
 - `scripts/docs-check.sh` checks documentation structure. prek runs it. Markdown lint stays in `.github/workflows/docs.yml`.

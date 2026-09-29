@@ -20,6 +20,7 @@
 
 - [ ] Commits follow [Conventional Commits](https://www.conventionalcommits.org/)
 - [ ] `Lint (prek)` passes
+- [ ] `Lint and validate documentation` passes
 - [ ] `prek run --all-files` passes locally
 - [ ] Documentation and `CHANGELOG.md` (under **Unreleased**) updated
 - [ ] No secrets or credentials included
