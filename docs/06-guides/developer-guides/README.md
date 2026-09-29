@@ -18,3 +18,5 @@ _None yet — add developer guides and list them here._
 
 For contribution mechanics (branches, commits, PRs) see
 [CONTRIBUTING.md](../../../CONTRIBUTING.md).
+
+Start a new document by copying [_template.md](_template.md).

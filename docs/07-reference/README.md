@@ -12,3 +12,5 @@ _None yet — add reference documents and list them here._
 
 Reference is consultative, not narrative — keep it factual and complete.
 Interface and schema contracts belong in [03-api/](../03-api/).
+
+Start a new document by copying [_template.md](_template.md).

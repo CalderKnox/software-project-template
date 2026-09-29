@@ -17,3 +17,5 @@ _None yet — add playbooks and list them here._
 Contributor onboarding belongs in
 [06-guides/developer-guides/](../06-guides/developer-guides/). Procedures for
 operating the system in production belong in [05-runbooks/](../05-runbooks/).
+
+Start a new document by copying [_template.md](_template.md).

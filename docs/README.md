@@ -20,10 +20,9 @@ operating the built system:
 | [07-reference/](07-reference/) | Reference material: glossary, configuration        |
 | [08-archive/](08-archive/)     | Superseded and historical documents                |
 
-Each directory has a `README.md` describing what belongs there and a local
-`_template.md` scaffold for new documents. Templates are intentionally
-directory-specific, but use the same metadata order, heading style, and
-placeholder conventions.
+Each directory that holds documents has a `README.md` describing what belongs
+there. Templates are directory-specific, use ATX headings, ISO dates, and
+lowercase status words, and doc scaffolds use `{curly}` tokens.
 
 ## Conventions
 
@@ -32,21 +31,21 @@ placeholder conventions.
 - Keep the metadata block immediately below the title. Use ISO dates
   (`YYYY-MM-DD`), lowercase lifecycle statuses, and links rather than copied
   text.
-- Every subdirectory is indexed by its `README.md`, which GitHub renders
-  automatically when browsing; `_template.md` files are scaffolds, not
+- Section and subsection directories are indexed by `README.md`, which GitHub
+  renders automatically when browsing; `_template.md` files are scaffolds, not
   documents.
 - Prefer linking from prose over duplicating content.
 
 ## Document quality
 
-Every directory must contain both `README.md` and `_template.md`. CI also runs
-Markdown linting with the repository's [.markdownlint.yaml](../.markdownlint.yaml)
-configuration.
-
-`README.md` is mandatory at the second and third directory levels under
-`docs/` (`docs/<section>/` and `docs/<section>/<subsection>/`). These indexes
-are the navigation contract for the documentation tree; deeper directories
-follow the same convention when they exist.
+[`scripts/docs-check.sh`](../scripts/docs-check.sh) checks this tree.
+`docs/README.md` is required, and `docs/_template.md` must not exist. Each
+immediate child of `docs/` needs a `README.md`. Index-only sections
+`02-design/` and `06-guides/` must not contain `_template.md`; every other
+section must. Each subsection (`docs/<section>/<subsection>/`) needs both
+`README.md` and `_template.md`. Directories deeper than that do not. CI also
+runs Markdown linting with the repository's
+[.markdownlint.yaml](../.markdownlint.yaml) configuration.
 
 ## ADRs versus design decisions
 
@@ -67,40 +66,22 @@ relevant to one module.
 
 ## Standard example
 
-The following minimal example shows the expected shape. Copy the template from
-the target directory and replace every placeholder before committing:
-
-```markdown
-# 0007. Use idempotency keys for write requests
-
-- **Status:** accepted
-- **Date:** 2026-09-11
-- **Deciders:** Platform and API teams
-
-## Context
-
-Retries can duplicate a write when a client loses the response.
-
-## Decision
-
-Require an idempotency key on payment-creation requests and retain the result
-for 24 hours.
-
-## Consequences
-
-Retries are safe, at the cost of a small persistence table and key-expiry job.
-```
+Copy [01-adrs/_template.md](01-adrs/_template.md) and replace every
+placeholder. See
+[01-adrs/0001-documentation-layout.md](01-adrs/0001-documentation-layout.md)
+for a completed ADR.
 
 ## Where does my document go?
 
-| You want to...                                   | Put it in       |
-| ------------------------------------------------ | --------------- |
-| Propose a significant change before building it  | `00-rfcs/`      |
-| Record a decision that was made                  | `01-adrs/`      |
-| Describe how the system works                    | `02-design/`    |
-| Pin down an interface, schema, or API contract   | `03-api/`       |
-| Walk someone through a recurring task            | `04-playbooks/` |
-| Document how to operate the system in production | `05-runbooks/`  |
-| Onboard a contributor or explain team workflow   | `06-guides/`    |
-| Look up terms, configuration, or environment details | `07-reference/` |
-| Find superseded or retired documents             | `08-archive/`   |
+| You want to...                                       | Put it in                 |
+| ---------------------------------------------------- | ------------------------- |
+| Propose a significant change before building it      | `00-rfcs/`                |
+| Record a cross-cutting or hard-to-reverse decision   | `01-adrs/`                |
+| Record a local or reversible trade-off               | `02-design/01-decisions/` |
+| Describe how the system works                        | `02-design/`              |
+| Pin down an interface, schema, or API contract       | `03-api/`                 |
+| Walk someone through a recurring task                | `04-playbooks/`           |
+| Document how to operate the system in production     | `05-runbooks/`            |
+| Onboard a contributor or explain team workflow       | `06-guides/`              |
+| Look up terms, configuration, or environment details | `07-reference/`           |
+| Find superseded or retired documents                 | `08-archive/`             |

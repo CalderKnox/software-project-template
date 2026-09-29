@@ -13,3 +13,5 @@ _None yet — add specifications and list them here._
 Interface and schema contracts belong in [03-api/](../../03-api/); this
 directory covers behavior. Ideas still under discussion belong in
 [00-rfcs/](../../00-rfcs/).
+
+Start a new document by copying [_template.md](_template.md).

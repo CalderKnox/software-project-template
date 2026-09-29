@@ -16,6 +16,8 @@ _None yet — add API documents and list them here._
 - Schema definitions and migration notes
 - Versioning and compatibility policy
 
-Contracts published here are the source of truth; implementations are
-verified against them. Interface changes still under discussion belong in
+Published contracts are drafts until `tests/02-contract/` is wired into CI.
+Interface changes still under discussion belong in
 [00-rfcs/](../00-rfcs/).
+
+Start a new document by copying [_template.md](_template.md).

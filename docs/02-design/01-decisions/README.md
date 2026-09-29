@@ -16,3 +16,5 @@ Formal, long-lived decisions with governance weight belong in
 Use this directory for choices that are local, reversible, or primarily useful
 to implementers. If the choice becomes cross-cutting or establishes a public
 promise, promote it to an ADR rather than silently changing this note.
+
+Start a new document by copying [_template.md](_template.md).

@@ -10,6 +10,7 @@ Learning material and task documentation for contributors and users.
 | [tutorials/](tutorials/)                 | Guided, learning-oriented lessons          |
 | [user-guides/](user-guides/)             | Documentation for users of the software    |
 
-Contributor mechanics (branches, commits, pull requests) stay in
-[CONTRIBUTING.md](../../CONTRIBUTING.md). Recurring engineering tasks belong
-in [04-playbooks/](../04-playbooks/).
+Child directories keep their own `_template.md`. This directory is an index
+and has no parent template to copy. Contributor mechanics (branches, commits,
+pull requests) stay in [CONTRIBUTING.md](../../CONTRIBUTING.md). Recurring
+engineering tasks belong in [04-playbooks/](../04-playbooks/).

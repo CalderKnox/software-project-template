@@ -11,3 +11,5 @@ _None yet — add user guides and list them here._
 
 Focus on tasks and outcomes, not internals — contributor-facing material
 belongs in [developer-guides/](../developer-guides/).
+
+Start a new document by copying [_template.md](_template.md).

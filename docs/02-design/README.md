@@ -12,6 +12,7 @@ responsibilities, and how they interact.
 | [02-modules/](02-modules/)           | Per-module design documentation          |
 | [03-specs/](03-specs/)               | Behavioral specifications                |
 
-Start documents from [_template.md](_template.md). Related: proposals in
+Add files only in the four subfolders above. This directory is an index and
+has no parent template to copy. Related: proposals in
 [00-rfcs/](../00-rfcs/), decisions in [01-adrs/](../01-adrs/), interface
 contracts in [03-api/](../03-api/).

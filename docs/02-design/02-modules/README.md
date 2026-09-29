@@ -12,3 +12,5 @@ _None yet — add module documents and list them here._
 
 One document per module, named after the module (e.g. `auth.md`). Keep module
 docs aligned with the code they describe.
+
+Start a new document by copying [_template.md](_template.md).

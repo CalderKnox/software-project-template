@@ -31,5 +31,14 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
+  - repo: local
+    hooks:
+      - id: docs-check
+        name: Check documentation structure
+        entry: bash scripts/docs-check.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+
 # Markdown is linted in CI (see .markdownlint.yaml and
-# .github/workflows/ci.yml), so it is intentionally not duplicated here.
+# .github/workflows/docs.yml), so it is intentionally not duplicated here.

@@ -17,3 +17,5 @@ _None yet — add runbooks and list them here._
 
 Keep runbooks actionable: commands first, explanation second. Configuration
 and environment lookup tables belong in [07-reference/](../07-reference/).
+
+Start a new document by copying [_template.md](_template.md).
