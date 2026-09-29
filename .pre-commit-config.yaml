@@ -31,5 +31,5 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
-# Markdown is linted by markdownlint (see .markdownlint.yaml and
-# .github/workflows/docs.yml), so it is intentionally not duplicated here.
+# Markdown is linted in CI (see .markdownlint.yaml and
+# .github/workflows/ci.yml), so it is intentionally not duplicated here.
