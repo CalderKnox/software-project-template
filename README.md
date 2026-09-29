@@ -44,7 +44,7 @@ cd {repo}
 ## Documentation
 
 See [docs/](docs/README.md) for RFCs, ADRs, design docs, API reference, and
-operational guides.
+operational guides. Coding agents should follow [AGENTS.md](AGENTS.md).
 
 ## Project structure
 
@@ -72,6 +72,7 @@ Standard top-level layout — keep new code consistent with it:
 ├── src/                     # Source code
 ├── tests/                   # Automated tests (numbered layers; see tests/README.md)
 ├── ADOPTING.md              # Checklist to finish before the repository is public
+├── AGENTS.md                # Instructions for coding agents (replace tokens)
 ├── CHANGELOG.md             # Notable changes (Keep a Changelog format)
 ├── CODE_OF_CONDUCT.md       # Community standards
 ├── CONTRIBUTING.md          # How to contribute

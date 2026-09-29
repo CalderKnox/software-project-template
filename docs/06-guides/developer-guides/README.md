@@ -17,6 +17,7 @@ _None yet — add developer guides and list them here._
 - Coding conventions, style, and tooling notes
 
 For contribution mechanics (branches, commits, PRs) see
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+[CONTRIBUTING.md](../../../CONTRIBUTING.md). Repository-wide instructions for
+coding agents live in [AGENTS.md](../../../AGENTS.md).
 
 Start a new document by copying [_template.md](_template.md).

@@ -3,6 +3,7 @@
 Complete every item before this repository is public.
 
 - [ ] In `README.md`, replace `{Project Name}`, the one-paragraph description, `{Feature one}`, `{Feature two}`, the clone URL (`{owner}` and `{repo}`), and `{Toolchain or runtime}`.
+- [ ] In `AGENTS.md`, replace `{Project Name}`, `{Toolchain or runtime}`, `{test command}`, and `{lint command}`.
 - [ ] In `LICENSE`, replace `{year}` and `{copyright holders}`.
 - [ ] In `SECURITY.md`, replace `{security-contact@example.com}`. Decide whether the supported-versions row "latest release" stays.
 - [ ] In `CODE_OF_CONDUCT.md`, replace `{contact-email}`.

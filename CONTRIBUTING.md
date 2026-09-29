@@ -5,6 +5,7 @@ started.
 
 If you are copying this template into a new repository, complete
 [ADOPTING.md](ADOPTING.md) first and delete that file when the checklist is done.
+Coding agents follow [AGENTS.md](AGENTS.md) after those tokens are replaced.
 
 ## Reporting issues
 

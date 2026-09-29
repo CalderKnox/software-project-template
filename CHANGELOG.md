@@ -34,4 +34,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `_template.md` scaffolds for RFCs, ADRs, and design docs, and nested
   sections for architecture, modules, specs, and guides.
 - Adoption checklist (`ADOPTING.md`) and `scripts/check-placeholders.sh`.
+- `AGENTS.md` is the coding-agent instruction template. Replace its `{curly}` tokens before relying on the commands.
 - `scripts/docs-check.sh` checks documentation structure. prek runs it. Markdown lint stays in `.github/workflows/docs.yml`.
