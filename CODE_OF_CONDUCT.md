@@ -29,7 +29,7 @@ Examples of unacceptable behavior:
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the project team at `<contact-email>`. All complaints will be
+reported to the project team at `{contact-email}`. All complaints will be
 reviewed and investigated promptly and fairly, and will result in a response
 deemed necessary and appropriate to the circumstances. The project team
 reserves the right to remove, edit, or reject comments, commits, code, issues,
@@ -38,4 +38,4 @@ and other contributions that violate this Code of Conduct.
 ## Attribution
 
 This Code of Conduct is adapted from the
-[Contributor Covenant](https://www.contributor-covenant.org), version 2.1.
+[Contributor Covenant](https://www.contributor-covenant.org), version 2.0.

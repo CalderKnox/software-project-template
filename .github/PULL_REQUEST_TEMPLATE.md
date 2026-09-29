@@ -19,6 +19,9 @@
 ## Checklist
 
 - [ ] Commits follow [Conventional Commits](https://www.conventionalcommits.org/)
-- [ ] Tests added or updated; CI passes
+- [ ] `Lint (prek)` passes
+- [ ] `prek run --all-files` passes locally
 - [ ] Documentation and `CHANGELOG.md` (under **Unreleased**) updated
 - [ ] No secrets or credentials included
+
+`Toolchain (not configured)` is not a test run. Tests are required only once a test suite exists.

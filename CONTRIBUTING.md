@@ -3,11 +3,14 @@
 Thank you for considering a contribution! This document explains how to get
 started.
 
+If you are copying this template into a new repository, complete
+[ADOPTING.md](ADOPTING.md) first and delete that file when the checklist is done.
+
 ## Reporting issues
 
-- **Bugs:** open a [bug report](https://github.com/<owner>/<repo>/issues/new?template=bug_report.yml)
-- **Ideas:** open a [feature request](https://github.com/<owner>/<repo>/issues/new?template=feature_request.yml)
-- **Questions:** start a discussion instead of filing an issue
+- **Bugs and ideas:** open an issue and choose Bug report or Feature request.
+- **Questions:** open a normal issue until Discussions is enabled. After that,
+  follow [ADOPTING.md](ADOPTING.md) to add the contact link.
 
 Please search existing issues before opening a new one.
 
@@ -22,9 +25,10 @@ Please search existing issues before opening a new one.
    prek install
    ```
 
-   The same hooks run in CI (`.github/workflows/ci.yml`); you can also run
-   them against the whole tree at any time with `prek run --all-files`.
-4. Run the test suite to confirm a clean baseline.
+   `Lint (prek)` in `.github/workflows/ci.yml` runs these hooks on every push
+   and pull request.
+4. There is no test suite yet. Run `prek run --all-files` (includes
+   `scripts/docs-check.sh`). Markdown lint runs in Documentation quality CI.
 
 ## Making changes
 
@@ -32,18 +36,21 @@ Please search existing issues before opening a new one.
    (`feat/add-retry-logic`, `fix/timeout-on-large-input`).
 2. Follow [Conventional Commits](https://www.conventionalcommits.org/) for
    commit messages (`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`).
-3. Add or update tests for any behavior change.
+3. There is no test suite yet. Once one exists, add or update tests for any
+   behavior change.
 4. Update documentation and add an entry under **Unreleased** in
    [CHANGELOG.md](CHANGELOG.md).
 5. Keep pull requests small and focused — one logical change per PR.
 
 ## Pull request checklist
 
-- [ ] CI passes (build, lint, tests)
+- [ ] `Lint (prek)` passes
 - [ ] `prek run --all-files` passes locally
-- [ ] Tests cover the new or changed behavior
 - [ ] Documentation and changelog updated
 - [ ] No secrets or credentials committed
+
+`Toolchain (not configured)` is not evidence of a build or tests. Tests are
+required only once a test suite exists.
 
 ## Code of conduct
 

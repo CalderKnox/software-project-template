@@ -1,11 +1,14 @@
 # CODEOWNERS — automatic reviewer requests based on file paths.
 # Syntax: <space-separated path pattern> <space-separated @user or @org/team handles>
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Every rule is inactive until one is uncommented with a real handle,
+# or the samples should be deleted.
 
 # Default owner for everything in the repository:
-# *       @<owner>/<team>
+# *       @ORG/TEAM
 
 # Examples:
-# /src/    @<owner>/core
-# /docs/   @<owner>/docs-team
-# *.md     @<owner>/docs-team
+# /src/    @ORG/TEAM
+# /docs/   @ORG/TEAM
+# *.md     @ORG/TEAM

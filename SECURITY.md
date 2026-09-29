@@ -9,10 +9,18 @@
 
 ## Reporting a vulnerability
 
-Please do **not** report security vulnerabilities through public GitHub
-issues.
+Do not open a public issue for a security vulnerability.
 
-Instead, email `<security-contact@example.com>` <!-- TODO: replace with a real mailbox or private vulnerability reporting link --> with:
+Use the repository **Report a vulnerability** button (GitHub private
+vulnerability reporting).
+
+There is no monitored mailbox until a maintainer replaces this token:
+
+`{security-contact@example.com}`
+
+TODO: replace `{security-contact@example.com}` with a real mailbox.
+
+When you report, include:
 
 - A description of the vulnerability and its potential impact
 - The affected version, commit, or configuration
@@ -20,7 +28,10 @@ Instead, email `<security-contact@example.com>` <!-- TODO: replace with a real m
 
 ### What to expect
 
+These response-time expectations apply only after a maintainer is monitoring
+the private report path. They are not a promise from the placeholder mailbox.
+
 - An initial response within 5 business days
-- Status updates as we investigate and prepare a fix
+- Status updates as the report is investigated and a fix is prepared
 - Public disclosure coordinated with you, typically after a fix is released
   (please allow up to 90 days before public disclosure)

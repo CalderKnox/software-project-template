@@ -1,5 +1,3 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Questions & discussions
-    url: https://github.com/<owner>/<repo>/discussions
-    about: Ask usage questions and discuss ideas before opening an issue.
+blank_issues_enabled: true
+# ADOPTING.md tells maintainers to enable Discussions, then set
+# blank_issues_enabled back to false and add a real contact_links URL.
