@@ -2,10 +2,9 @@
 
 ## Supported versions
 
-| Version          | Supported |
-| ---------------- | --------- |
-| latest release   | ✅        |
-| older releases   | ❌        |
+| Version        | Supported |
+| -------------- | --------- |
+| no release yet | n/a       |
 
 ## Reporting a vulnerability
 
@@ -17,8 +16,6 @@ vulnerability reporting).
 There is no monitored mailbox until a maintainer replaces this token:
 
 `{security-contact@example.com}`
-
-TODO: replace `{security-contact@example.com}` with a real mailbox.
 
 When you report, include:
 

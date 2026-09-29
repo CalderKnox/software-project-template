@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to file a bug! Please fill in the details below.
+        Report security vulnerabilities through SECURITY.md, not this form.
   - type: textarea
     id: description
     attributes:

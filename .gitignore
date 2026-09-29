@@ -9,7 +9,6 @@ desktop.ini
 *.swp
 *.swo
 *~
-*.git
 **/.orca
 **/.omc
 **/.pi
@@ -19,6 +18,9 @@ desktop.ini
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+credentials.json
 
 # --- Logs & temporary files ---
 *.log
