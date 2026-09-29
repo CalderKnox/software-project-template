@@ -1,6 +1,6 @@
 # Playbooks
 
-Step-by-step how-to guides for recurring tasks and workflows.
+Step-by-step how-tos for recurring engineering tasks.
 
 ## Contents
 

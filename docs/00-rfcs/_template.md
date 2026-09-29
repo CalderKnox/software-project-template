@@ -1,6 +1,7 @@
 # NNNN. {Title}
 
 - **Status:** draft
+<!-- Status values: draft, review, accepted, rejected, implemented, or superseded. -->
 - **Author:** {name}
 - **Created:** YYYY-MM-DD
 - **Deciders:** {who signs off}

@@ -23,10 +23,11 @@ type, so authors copy the wrong scaffold.
 Keep two decision ledgers, keep playbooks, runbooks, and guides separate,
 and enforce that layout with `scripts/docs-check.sh`.
 
-- `docs/01-adrs/` records a cross-cutting or hard-to-reverse decision.
+- `docs/01-adrs/` records a decision that is cross-cutting, difficult to
+  reverse, or a durable compatibility, security, or operational commitment.
   Supersede it by adding a new ADR and leaving the original text in place.
-- `docs/02-design/01-decisions/` records a local or reversible trade-off.
-  Update the note as the design changes.
+- `docs/02-design/01-decisions/` records a component-local implementation
+  trade-off. Update the note as the design changes.
 - `docs/04-playbooks/` holds recurring engineering how-tos.
 - `docs/05-runbooks/` holds production procedures: deploy, monitor, and
   respond.
@@ -35,15 +36,17 @@ and enforce that layout with `scripts/docs-check.sh`.
   in developer guides.
 
 `docs/README.md` is required, and `docs/_template.md` is not. Each section
-has a `README.md`. `docs/02-design` and `docs/06-guides` are index-only and
-do not carry a parent `_template.md`; every other section does. Each
-subsection has both `README.md` and `_template.md`. Directories deeper than
-a subsection are not required to, so an asset folder can exist later. The
-docs workflow and the local pre-commit hook both run `scripts/docs-check.sh`.
+has a `README.md`. `docs/02-design` and `docs/06-guides` are index-only:
+no parent `_template.md`, and no file at that level other than `README.md`.
+Every other section has a `_template.md`. Each subsection has both
+`README.md` and `_template.md`. Directories deeper than a subsection are
+not required to, so an asset folder can exist later. The docs workflow and
+the local pre-commit hook both run `scripts/docs-check.sh`.
 
 ## Consequences
 
 Local notes can change without rewriting ADR history. Index-only folders do
 not carry a parent template. Authors copy the `_template.md` in the
 directory that matches the document they are writing. A missing index, a
-template in an index-only folder, or a dropped cross-link fails the check.
+template in an index-only folder, a file next to an index-only README, or a
+dropped cross-link fails the check.

@@ -1,6 +1,6 @@
 # Runbooks
 
-Operational procedures for building, deploying, and operating the system.
+Operational procedures for deploying, monitoring, and responding in production.
 
 ## Contents
 
@@ -11,7 +11,7 @@ _None yet — add runbooks and list them here._
 
 ## What belongs here
 
-- Build, release, and deployment procedures
+- Release and deployment procedures
 - Monitoring, alerting, and on-call procedures
 - Incident response and rollback procedures
 

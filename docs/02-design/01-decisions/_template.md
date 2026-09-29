@@ -5,8 +5,9 @@
 - **Owner:** {name or team}
 - **Related:** {module, design doc, or ADR; None if unavailable}
 
-<!-- Use for local, reversible implementation trade-offs. Promote durable,
-cross-cutting commitments to 01-adrs. -->
+<!-- Use for a component-local implementation trade-off. Promote a decision
+that is cross-cutting, difficult to reverse, or a durable compatibility,
+security, or operational commitment to 01-adrs. -->
 
 ## Context
 
