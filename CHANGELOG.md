@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `AGENTS.md` notes that Cloud Agents have `prek` 0.5.4 and `markdownlint-cli2` 0.23.2 on `PATH`, and that this template has no application server.
 - Initial project template with standardized directory structure and community health files.
 - Pre-commit hooks via [prek](https://github.com/j178/prek): `.pre-commit-config.yaml` for local use and a `Lint (prek)` CI job that runs `prek run --all-files` on every pull request and on every push to `main`.
 - Documentation skeleton (`docs/`): numbered sections in lifecycle order —
