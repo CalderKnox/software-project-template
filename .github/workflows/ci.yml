@@ -59,6 +59,6 @@ jobs:
           persist-credentials: false
 
       # v3.0.0 (4e14d07f) checksums stop before 0.5.4, so that pin skips verification.
-      - uses: j178/prek-action@c3f68a15f4fc83f8da3398da620e4de60ce27d01 # prek 0.5.4 checksums
+      - uses: j178/prek-action@1382ad72dea72f9d53832f2bcb65b3e87a947204 # prek 0.5.4 checksums
         with:
           prek-version: "0.5.4"
