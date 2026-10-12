@@ -35,6 +35,22 @@ in the `Lint and validate documentation` job, not in prek.
 The CI job `Toolchain (not configured)` echoes and exits 0. A green run of
 that job is not a build and not a test run.
 
+## Cursor Cloud specific instructions
+
+There is no application server and `src/` is empty. Do not start a dev server.
+
+Cloud Agent images install `prek` 0.5.4 and `markdownlint-cli2` 0.23.2 onto
+`PATH`. Markdown lint uses the same package version as the Documentation
+quality workflow. Run:
+
+```bash
+prek run --all-files
+markdownlint-cli2 "**/*.md"
+```
+
+`scripts/check-placeholders.sh` exits 1 while template tokens remain. That
+exit is expected until adoption is finished.
+
 ## Where work goes
 
 | Kind of change | Where |
