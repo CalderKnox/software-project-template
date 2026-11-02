@@ -10,6 +10,13 @@ updates:
       # CodeQL fails when init and analyze run different versions, so bump
       # every github/codeql-action step in a single pull request.
       codeql-action:
+        applies-to: version-updates
+        patterns:
+          - "github/codeql-action*"
+      # A group applies to one update type only, so security updates need a
+      # second group with the same patterns.
+      codeql-action-security:
+        applies-to: security-updates
         patterns:
           - "github/codeql-action*"
 

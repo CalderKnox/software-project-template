@@ -24,8 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The CodeQL workflow header states that the scan covers GitHub Actions only until a language matrix row is added.
 - prek is pinned to 0.5.4.
 - The prek CI job relies on prek-action to install the binary and hook environments.
-
-- Dependabot groups `github/codeql-action` updates, so `init` and `analyze` always move in the same pull request.
+- Dependabot groups `github/codeql-action` version and security updates, so `init` and `analyze` move in the same Dependabot pull request.
 
 ### Fixed
 
