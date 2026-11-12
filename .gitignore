@@ -1,6 +1,6 @@
 # --- Operating system ---
 .DS_Store
-Thumbs.db
+*.db
 desktop.ini
 
 # --- Editors & IDEs ---
