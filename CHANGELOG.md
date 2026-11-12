@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `.gitignore` now ignores all local database files.
 - The adoption check skips `ADOPTING.md` and gitignored files, and it fails on leftover template sentences: the README description, setup TODOs, the changelog adoption line, and any remaining `ADOPTING.md` reference. Command tokens are replaced in the toolchain change, not before a stack exists.
 - CodeQL `init` and `analyze` are pinned to the `v4.39.1` commit. Both pins must move in the same change: CodeQL refuses to run when `init` and `analyze` report different versions. The prek CI action pin includes the prek 0.5.4 checksum list, so that binary is verified. `pre-commit-hooks` is pinned to the `v6.0.0` commit. Local install lines pin `prek==0.5.4`.
 - `scripts/docs-check.sh` rejects a file placed directly in index-only `docs/02-design` or `docs/06-guides`. Architecture docs route to `02-design/00-architecture/`. Contributor onboarding routes to `06-guides/developer-guides/`.
