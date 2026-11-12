@@ -72,6 +72,7 @@ Standard top-level layout — keep new code consistent with it:
 ├── scripts/                 # docs-check.sh and check-placeholders.sh
 ├── src/                     # Source code
 ├── tests/                   # Automated tests (numbered layers; see tests/README.md)
+├── tools/                   # Project-specific repository tooling
 ├── ADOPTING.md              # Checklist to finish before the repository is public
 ├── AGENTS.md                # Instructions for coding agents (replace tokens)
 ├── CHANGELOG.md             # Notable changes (Keep a Changelog format)
