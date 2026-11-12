@@ -11,9 +11,6 @@ desktop.ini
 *.swp
 *.swo
 *~
-**/.orca
-**/.omc
-**/.pi
 
 
 # --- Environment variables & secrets ---
